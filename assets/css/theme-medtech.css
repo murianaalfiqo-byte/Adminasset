@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+/* --- VARIABLE MASTER (LIGHT MODE DEFAULT) --- */
+:root {
+    --primary-teal: #0D9488;
+    --primary-teal-hover: #0F766E;
+    --secondary-navy: #0F172A;
+    --bg-canvas: #F8FAFC;
+    --card-bg: #FFFFFF;
+    --text-main: #0F172A;
+    --text-muted: #64748B;
+    --border-color: #E2E8F0;
+    --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* --- VARIABLE MASTER (DARK MODE) --- */
+[data-bs-theme="dark"] {
+    --primary-teal: #14B8A6;
+    --primary-teal-hover: #0D9488;
+    --secondary-navy: #020617;
+    --bg-canvas: #0B0F19;
+    --card-bg: #1E293B;
+    --text-main: #F8FAFC;
+    --text-muted: #94A3B8;
+    --border-color: #334155;
+    --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: var(--bg-canvas) !important;
+    color: var(--text-main) !important;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* --- OVERRIDE BOOTSTRAP UNTUK DARK MODE --- */
+[data-bs-theme="dark"] .bg-white,
+[data-bs-theme="dark"] .bg-light {
+    background-color: var(--card-bg) !important;
+    color: var(--text-main) !important;
+}
+
+[data-bs-theme="dark"] .text-dark {
+    color: var(--text-main) !important;
+}
+
+[data-bs-theme="dark"] .text-muted {
+    color: var(--text-muted) !important;
+}
+
+[data-bs-theme="dark"] .border,
+[data-bs-theme="dark"] .border-bottom,
+[data-bs-theme="dark"] .border-top,
+[data-bs-theme="dark"] .border-subtle {
+    border-color: var(--border-color) !important;
+}
+
+/* --- KOMPONEN KARTU & TABEL --- */
+.card {
+    background-color: var(--card-bg) !important;
+    border-color: var(--border-color) !important;
+    box-shadow: var(--card-shadow);
+    border-radius: 16px !important;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.3s ease;
+}
+
+[data-bs-theme="dark"] .table {
+    color: var(--text-main) !important;
+    background-color: var(--card-bg) !important;
+}
+
+[data-bs-theme="dark"] .table thead th,
+[data-bs-theme="dark"] .table-hover tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.04) !important;
+    color: var(--text-main) !important;
+}
+
+/* --- FORM & INPUT --- */
+[data-bs-theme="dark"] .form-control,
+[data-bs-theme="dark"] .form-select,
+[data-bs-theme="dark"] .input-group-text {
+    background-color: #0F172A !important;
+    color: var(--text-main) !important;
+    border-color: var(--border-color) !important;
+}
+
+[data-bs-theme="dark"] .form-control::placeholder {
+    color: var(--text-muted) !important;
+}
+
+/* --- DROPDOWN & MODAL --- */
+[data-bs-theme="dark"] .dropdown-menu,
+[data-bs-theme="dark"] .modal-content {
+    background-color: var(--card-bg) !important;
+    border-color: var(--border-color) !important;
+    color: var(--text-main) !important;
+}
+
+[data-bs-theme="dark"] .dropdown-item {
+    color: var(--text-main) !important;
+}
+
+[data-bs-theme="dark"] .dropdown-item:hover {
+    background-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+/* --- BADGES & BUTTONS --- */
+.text-teal {
+    color: var(--primary-teal) !important;
+}
+
+.btn-teal {
+    background-color: var(--primary-teal) !important;
+    border-color: var(--primary-teal) !important;
+    color: #FFFFFF !important;
+}
+
+.btn-teal:hover {
+    background-color: var(--primary-teal-hover) !important;
+    border-color: var(--primary-teal-hover) !important;
+}
+
+.badge-emerald {
+    background-color: rgba(16, 185, 129, 0.15);
+    color: #10B981;
+    border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.badge-amber {
+    background-color: rgba(245, 158, 11, 0.15);
+    color: #F59E0B;
+    border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.badge-red {
+    background-color: rgba(239, 68, 68, 0.15);
+    color: #EF4444;
+    border: 1px solid rgba(239, 68, 68, 0.3);
+}
